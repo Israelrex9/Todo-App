@@ -5,8 +5,6 @@ const tagList = document.querySelectorAll('.tag')
 const todoItemContainer = document.getElementById("todo-item-container")
 const doneItemContainer = document.getElementById("done-item-container")
 const displayTasks = document.getElementById("display")
-const titleCategoryTextDone = document.getElementById("title-h3-done")
-
 
 
 task.addEventListener("input", function(event){
@@ -18,7 +16,6 @@ task.addEventListener("input", function(event){
     }
     
 })
-
 
 //object to keep track of selected tags
 const selectedTags = {
@@ -197,6 +194,24 @@ function printTodoTasksOnUi(){
         
         const editPencil = document.createElement("img");
         editPencil.src = "./pencil-edit-02.svg";
+        editPencil.addEventListener("click", function(){
+            task.value = todoTask.taskName
+            tagList.forEach(function(tag){
+                let tagName = tag.getAttribute("value")
+                if (todoTask.tagSelected.includes(tagName)){
+                    selectedTags[tagName] = true
+                    tag.classList.add('selected')
+                    tag.style.backgroundColor = "#000000"
+                } else {
+                    selectedTags[tagName] = false
+                    tag.classList.remove('selected')
+                    tag.style.backgroundColor = ''
+                }
+            })
+            createdTaskArray.splice(index, 1)
+            localStorage.setItem("todoTasks", JSON.stringify(createdTaskArray))
+            fetchTodoTasks()
+        })
 
         if(!createdTaskArray[index].completed){
             editPencil.style.display = "flex"
@@ -206,6 +221,11 @@ function printTodoTasksOnUi(){
 
         const deleteAction = document.createElement("img");
         deleteAction.src = "./delete-02.svg";
+        deleteAction.addEventListener("click", function(){
+            createdTaskArray.splice(index, 1)
+            localStorage.setItem("todoTasks", JSON.stringify(createdTaskArray))
+            fetchTodoTasks()
+        })
 
 
         actionsContainer.appendChild(editPencil);
