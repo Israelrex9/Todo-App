@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List App</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="head">
+            <img src="./icon.svg">
+            <div class="head-text">
+                <h2>Horizon To-Do List</h2>
+                <p>Create a todo task and inlcude tags to identify them.</p>
+            </div>
+        </div>
+
+        <form class="form" id="form">
+            <input type="text" name="task" id="input" class="input" placeholder="Create a todo task">
+            <div class="input_actions">
+                <span class="tags">
+                    <div class="tag" id="design-tag" value="Design">
+                        <p>Design</p>
+                        <img src="./add-circle.svg">
+                    </div>
+                    <div class="tag" id="chores-tag" value="Chores">
+                        <p>Chores</p>
+                        <img src="./add-circle.svg">
+                    </div>
+                    <div class="tag" id="code-tag" value="Code">
+                        <p>code</p>
+                        <img src="./add-circle.svg">
+                    </div>
+                </span>
+                <button id="button" type="submit" >Add Task</button>
+            </div>
+        </form>
+
+        <div id="display">
+            <div class="todo" id="todo-item-container">
+                <!-- <div id="title">
+                    <h3 class="title-h3" id="title-h3-todo"></h3>
+                </div> -->
+                <!-- <div class="tasks">
+                    <div class="task-container">
+                        <div class="task-container-top">
+                            <img src="./checkmark-circle.svg">
+                            <img src="./checkmark-circle-checked.svg">
+                            <h4>Design Ultras new UI</h4>
+                        </div>
+                        <div class="task-container-bottom">
+                            <div class="tags">
+                                <div id="tag-design" class="selected">
+                                    <p>Design</p>
+                                </div>
+                                <div id="tag-chores" class="selected">
+                                    <p>Chores</p>
+                                </div>
+                                <div id="tag-code" class="selected" >
+                                    <p>Code</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <img src="./pencil-edit-02.svg" id="edit">
+                                <img src="./delete-02.svg" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="done" id="done-item-container">
+                <!-- <div id="title">
+                    <h3 class="title-h3" id="title-h3-done"></h3>
+                </div> -->
+                <!-- <div class="tasks">
+                    <div class="task-container">
+                        <div class="task-container-top">
+                            <img src="./checkmark-circle.svg">
+                            <img src="./checkmark-circle-checked.svg">
+                            <h4>Design Ultras new UI</h4>
+                        </div>
+                        <div class="task-container-bottom">
+                            <div class="tags">
+                                <div id="tag-design" class="selected">
+                                    <p>Design</p>
+                                </div>
+                                <div id="tag-chores" class="selected">
+                                    <p>Chores</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <img src="./delete-02.svg" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
