@@ -1,15 +1,10 @@
 const task = document.getElementById("input");
 const taskButton = document.getElementById("button");
 const form = document.getElementById("form");
-// const design = document.getElementById("design-tag");
-// const chores = document.getElementById("chores-tag");
-// const code = document.getElementById("code-tag");
 const tagList = document.querySelectorAll('.tag')
 const todoItemContainer = document.getElementById("todo-item-container")
 const doneItemContainer = document.getElementById("done-item-container")
 const displayTasks = document.getElementById("display")
-// const titleCategory = document.getElementById("title")
-// const titleCategoryTextToDo = document.getElementById("title-h3-todo")
 const titleCategoryTextDone = document.getElementById("title-h3-done")
 
 
