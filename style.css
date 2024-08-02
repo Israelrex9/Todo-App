@@ -24,7 +24,7 @@ body, html {
 }
 
 .main-container {
-    width: 40%;
+    width: 50%;
     height: auto;
     margin: auto;
     padding: 1.5rem;
@@ -142,8 +142,8 @@ body, html {
 }
 
 .tags{
+    width: fit-content;
     display: flex;
-    align-items: center;
     gap: 0.5rem;
 }
 
@@ -202,7 +202,6 @@ button:hover{
     width: 100%;
     height: auto;
     display: flex;
-    /* margin-top: 2rem; */
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
@@ -296,6 +295,7 @@ button:hover{
 }
 
 .task-container-bottom {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -373,4 +373,30 @@ button:hover{
 
 .done h4{
     color: #BDBDBD;
+}
+
+
+@media screen and (max-width: 900px){
+    .main-container {
+        width: 90%;
+        padding: 1rem;
+    }
+    .input_actions {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+    button{
+        width: 100%;
+    }
+    .tag{
+        width: 100%;
+    }
+    .tags{
+        width: fit-content;
+    }
 }

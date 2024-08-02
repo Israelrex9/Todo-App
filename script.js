@@ -47,6 +47,14 @@ function resetTags(){
 
 let createdTaskArray = []
 
+function checkArray() {
+    if(createdTaskArray.length === 0){
+        displayTasks.style.display = "none"
+    } else {
+        displayTasks.style.display = "flex"
+    }
+}
+
 form.addEventListener("submit", function(event){
     event.preventDefault()
 
@@ -73,6 +81,7 @@ form.addEventListener("submit", function(event){
     resetTags()
     fetchTodoTasks()
     printTodoTasksOnUi()
+    checkArray()
     
 })
 
@@ -91,6 +100,9 @@ function printTodoTasksOnUi(){
     todoItemContainer.innerHTML = ''
     doneItemContainer.innerHTML = ''
     displayTasks.classList.add("display")
+    // displayTasks.style.display = "flex"
+
+    checkArray()
 
     let titleTodo = document.createElement("div")
     titleTodo.classList.add("title")
